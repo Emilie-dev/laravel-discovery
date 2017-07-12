@@ -27,15 +27,26 @@ Route::get('/customer/{id}', 'CustomerController@getCustomer');
 
 
 
-Route::post('/customer', 'CustomerController@addCustomer');
+
+// Route::put('/customer/{id}', 'CustomerController@updateCustomer');
+Route::post('/updateCustomer/{id}', 'CustomerController@updateCustomer');
 
 
 
-Route::delete('/customer/{id}', 'CustomerController@deleteCustomer');
+
+// Route::delete('/customer/{id}', 'CustomerController@deleteCustomer');
+Route::get('/deleteCustomer/{id}', 'CustomerController@deleteCustomer');
 
 
 
-Route::put('/customer/{id}', 'CustomerController@updateCustomer');
+
+
+Route::post('/addCustomer', 'CustomerController@addCustomer');
+
+
+
+
+
 
 
 

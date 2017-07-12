@@ -22,6 +22,25 @@ class CustomerController extends Controller
     }
 
 
+    public function updateCustomer ( Request $request, $id) {
+
+    	$customer = Customer::find($id);
+    	$customer->first_name = $request->first_name;
+    	$customer->last_name = $request->last_name;
+    	$customer->email = $request->email;
+    	$customer->save();
+    	return redirect('/customers');
+    }
+
+
+    public function deleteCustomer (Request $request, $id) {
+
+    	$customer = Customer::destroy($id);
+    	return "The customer has been deleted!";
+
+    }
+
+
     public function addCustomer () {
 
     	
@@ -29,18 +48,7 @@ class CustomerController extends Controller
     }
 
 
-    public function deleteCustomer ($id) {
 
-
-
-    }
-
-
-    public function updateCustomer ($id) {
-
-
-
-    }
 
 
 
