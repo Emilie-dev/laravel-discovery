@@ -17,15 +17,27 @@
 Route::get('/customers', 'CustomerController@getAllCustomers');
 
 
-
-
 // http://localhost:8000/customer/AZERT
 // http://localhost:8000/customer/123
 // http://localhost:8000/customer/###
 // http://localhost:8000/customer/KKK
 // http://localhost:8000/customer/12
 
-// Route::get('/customer/{id}', 'CustomerController@getCustomer');
+Route::get('/customer/{id}', 'CustomerController@getCustomer');
+
+
+
+Route::post('/customer', 'CustomerController@addCustomer');
+
+
+
+Route::delete('/customer/{id}', 'CustomerController@deleteCustomer');
+
+
+
+Route::put('/customer/{id}', 'CustomerController@updateCustomer');
+
+
 
 
 

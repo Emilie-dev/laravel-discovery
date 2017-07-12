@@ -28,18 +28,17 @@
                     			</tr>
                     		</thead>
                     		<tbody>
-                    			@foreach ($customers as $customers)
+                    			@foreach ($customers as $customer)
                     				<tr>
-	                    				<td>{{ $customer->first_name }}</td>
-	                    				<td>{{ $customer->last_name }}</td>
-	                    				<td>{{ $customer->email }}</td>
-	                    				<td>{{ $customer->created_at }}</td>
+	                    				<td>{{$customer->first_name}}</td>
+	                    				<td>{{$customer->last_name}}</td>
+	                    				<td>{{$customer->email}}</td>
+	                    				<td>{{$customer->created_at}}</td>
 	                    				<td>
-	                    					<a href="" 
-
-	                    				{{ $cusotmer->}} </td>
+	                    					<a href={{'/customer/'.$customer->id}}->Détails</a> 
+	                    			    </td>
                     				</tr>
-                    			@foreach
+                    			@endforeach
                     		</tbody>
                     	</table>
                     </div>
